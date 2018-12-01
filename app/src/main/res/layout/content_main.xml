@@ -11,11 +11,54 @@
 
     <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="32dp"
+            android:text="@string/intro_text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/textintro" android:textStyle="bold"
+            android:textSize="24sp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/donut_circle"
+            android:id="@+id/donut"
+            android:contentDescription="@string/donuts" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/textintro" android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/icecream_circle"
+            android:id="@+id/ice_cream" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/donut" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:contentDescription="@string/ice_cream_sandwiches"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/froyo_circle" android:id="@+id/froyo"
+            app:layout_constraintTop_toBottomOf="@+id/ice_cream" android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="29dp"
+            android:contentDescription="@string/froyo"/>
+    <TextView
+            android:text="@string/donuts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/dounut_description"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toEndOf="@+id/donut"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="@+id/donut"/>
+    <TextView
+            android:text="@string/ice_cream_sandwiches"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ice_cream_description" app:layout_constraintStart_toEndOf="@+id/ice_cream"
+            android:layout_marginStart="24dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toTopOf="@+id/ice_cream"/>
+    <TextView
+            android:text="@string/froyo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/froyo_description" app:layout_constraintStart_toEndOf="@+id/froyo"
+            android:layout_marginStart="24dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toTopOf="@+id/froyo"/>
 
 </android.support.constraint.ConstraintLayout>
