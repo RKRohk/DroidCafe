@@ -2,9 +2,11 @@ package com.example.rohan.droidcafe
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -35,5 +37,17 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+    fun displayToast(message:String){
+        Toast.makeText(applicationContext,message,Toast.LENGTH_SHORT).show()
+    }
+    fun showDonutOrder(view:View){
+        displayToast(message = getString(R.string.donuts))
+    }
+    fun showIceCreamOrder(view: View){
+        displayToast(message = getString(R.string.ice_cream_sandwiches))
+    }
+    fun showFroyoOrder(view: View){
+        displayToast(message = getString(R.string.froyo))
     }
 }
