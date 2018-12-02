@@ -1,6 +1,8 @@
 package com.example.rohan.droidcafe
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.Contacts
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
@@ -18,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            val intent = Intent(this,OrderActivity::class.java)
+            startActivity(intent)
         }
     }
 
